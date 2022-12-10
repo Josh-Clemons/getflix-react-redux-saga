@@ -10,6 +10,12 @@ const Detail = () => {
             <div>{movie.title}</div>
             <img src={movie.poster} />
             <br />
+            <div>{movie.description}</div>
+            <ul>Categories:
+                {movie.category_array.map((category) => {
+                    return <li key={category}>{category}</li>
+                })}
+            </ul>
             <button onClick={()=>{history.push('/')}}>BACK</button>
 
         </>
