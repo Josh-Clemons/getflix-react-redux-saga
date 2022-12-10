@@ -1,12 +1,26 @@
+.movieListMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .movies {
     display : flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 .movies div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
     cursor: pointer;
     margin: 20px;
     padding: 5px;
     border: solid 2px black;
     border-radius: 5px;
+
+
 }

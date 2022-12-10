@@ -6,7 +6,7 @@ const Detail = () => {
     const history = useHistory();
     const movie = useSelector(store => store.detail)
     return (
-        <>
+        < div onClick={()=>{history.push('/')}}>
             <div>{movie.title}</div>
             <img src={movie.poster} />
             <br />
@@ -16,9 +16,9 @@ const Detail = () => {
                     return <li key={category}>{category}</li>
                 })}
             </ul>
-            <button onClick={()=>{history.push('/')}}>BACK</button>
+            <h3>HERE IS A THING TO CLICK ON TO GO BACK, but not necessary</h3>
 
-        </>
+        </div>
     )
 }
 
