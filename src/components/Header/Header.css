@@ -5,22 +5,12 @@
     background-color: #02003b;
     background-image: url("https://transparenttextures.com/patterns/black-felt.png");
     text-align: center;
-    height: 150px;
-
-}
-
-
-.headerDiv {
-    text-align: center;
     width: 85%;
     height: auto;
     margin: auto;
     padding: 30px;
-    /* position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0; */
+    border-radius: 20px;
+    box-shadow: 0 0 15px black;
 }
 
 .headerDiv b {
