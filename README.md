@@ -1,9 +1,11 @@
 # Project Name
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+Josh's Movie List
 
 ## Description
 
-Your project description goes here. What problem did you solve? How did you solve it?
+A website that has a library of movies, when a movie is clicked the user is navigated to an additional details page. More details and screenshots to come after I finish with stretch goals.
 
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
+
+Technologies:
+- React, Redux, Saga, SQL, etc
