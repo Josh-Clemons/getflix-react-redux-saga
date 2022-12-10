@@ -1,0 +1,49 @@
+.detailDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    min-width: 300px;
+    padding: 10px;
+    margin: 20px;
+    background-color: white;
+    box-shadow: 12px 12px 9px 7px rgba(0,0,0,0.74);
+
+}
+
+.movieDetailDiv span {
+    font-weight: bold;
+}
+
+.movieDetailDiv {
+    padding: 10px;
+}
+
+
+
+.backButtonFixed {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 200px;
+    padding: 5px;
+    margin: 0px 10px 20px 0px;
+    background-color: rgb(88, 88, 88);
+    border: 3px solid #4b4c4b;
+    border-radius: 5px;
+    box-shadow: 10px 10px 28px 0px rgba(0,0,0,0.82);
+}
+
+.backButtonFixed:hover {
+    box-shadow: inset 0px 0px 5px black;
+    border: 3px solid rgb(50, 49, 49);
+}
+
+.backButtonFixed:active {
+    margin: 0px 5px 15px 0px;
+}
