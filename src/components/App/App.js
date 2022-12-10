@@ -3,6 +3,7 @@ import './App.css';
 import MovieList from '../MovieList/MovieList';
 import Detail from '../Detail/Detail';
 
+
 function App() {
   return (
     <div className="App">

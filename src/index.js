@@ -26,7 +26,7 @@ function* fetchAllMovies() {
     } catch {
         console.log('get all error');
     }
-        
+
 }
 
 // Create sagaMiddleware
@@ -52,11 +52,24 @@ const genres = (state = [], action) => {
     }
 }
 
+// Used to store movie info for details page
+const detail = (state = [], action) => {
+    switch (action.type) {
+        case 'SET_DETAIL':
+            return action.payload;
+        default:
+            return state;
+    };
+};
+
+
+
 // Create one store that all components can use
 const storeInstance = createStore(
     combineReducers({
         movies,
         genres,
+        detail,
     }),
     // Add sagaMiddleware to our store
     applyMiddleware(sagaMiddleware, logger),
@@ -68,7 +81,7 @@ sagaMiddleware.run(rootSaga);
 ReactDOM.render(
     <React.StrictMode>
         <Provider store={storeInstance}>
-        <App />
+            <App />
         </Provider>
     </React.StrictMode>,
     document.getElementById('root')
