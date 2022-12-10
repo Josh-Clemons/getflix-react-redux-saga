@@ -41,7 +41,7 @@
 
 .backButtonFixed:hover {
     box-shadow: inset 0px 0px 5px black;
-    border: 3px solid black;
+    border: 3px solid rgb(50, 49, 49);
 }
 
 .backButtonFixed:active {
