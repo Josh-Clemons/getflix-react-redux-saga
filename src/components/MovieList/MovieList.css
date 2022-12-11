@@ -40,6 +40,10 @@
     justify-content: center;
 }
 
+.movieListMain h2 {
+    margin: 10px;
+}
+
 .movies div {
     display: flex;
     flex-direction: column;
@@ -55,6 +59,6 @@
 
 /* on hover of a movie it causes it shift up on the page and change background-color */
 .movies div:hover {
-    background-color: rgb(189, 238, 196);
-    margin: 5px 20px 35px 20px;
+    background-color: rgb(188, 215, 254);
+    margin: 10px 20px 30px 20px;
 }

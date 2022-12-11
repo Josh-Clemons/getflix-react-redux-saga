@@ -32,7 +32,7 @@ const Detail = () => {
                     return <li key={category}>{category}</li>
                 })}
             </ul>
-            <div className="backButtonFixed" onClick={() => { history.push('/') }}>Go Back</div>
+            <div className="backButtonFixed btn btn-secondary" onClick={() => { history.push('/') }}>Go Back</div>
 
         </div>
     )

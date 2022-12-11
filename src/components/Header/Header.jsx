@@ -6,7 +6,7 @@ const Header = () => {
   //note: if making title changes, the info between the spans flickers
   return (
     <div className='headerDiv'>
-        <b>The <span>Mov</span>ies<span> Sa</span>ga!</b>
+        <b>Jos<span>h's</span> Get<span>fl</span>ix</b>
     </div>
   )
 }
