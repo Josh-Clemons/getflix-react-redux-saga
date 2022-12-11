@@ -1,7 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import './MovieList.css'
 import { useHistory } from 'react-router-dom';
+import AddMovieModal from '../AddMovieModal/AddMovieModal';
+
+
 
 
 function MovieList() {
@@ -9,6 +12,8 @@ function MovieList() {
 
     const dispatch = useDispatch();
     const movies = useSelector(store => store.movies);
+
+    
 
     useEffect(() => {
         dispatch({ type: 'FETCH_MOVIES' });
@@ -19,6 +24,8 @@ function MovieList() {
         dispatch({ type: 'SET_DETAIL', payload: movie })
         history.push('/detail');
     }
+
+
 
     return (
         <main className='movieListMain'>
@@ -32,6 +39,7 @@ function MovieList() {
                         </div>
                     );
                 })}
+                <AddMovieModal />
             </section>
         </main>
 
