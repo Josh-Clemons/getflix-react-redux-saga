@@ -59,7 +59,7 @@
 
 /* on hover of a movie it causes it shift up on the page and change background-color */
 .movies div:hover {
-    background-color: rgb(188, 215, 254);
+    background-color: rgb(225, 238, 255);
     margin: 10px 20px 30px 20px;
 }
 
