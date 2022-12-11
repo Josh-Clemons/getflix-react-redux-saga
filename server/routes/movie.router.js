@@ -4,6 +4,8 @@ const pool = require('../modules/pool')
 
 router.get('/', (req, res) => {
 
+  // used one query to grab all movie info on first GET. This way I do not have to query again
+  // when a detail page is loaded
   const query = `SELECT  "movies"."id", "movies"."title", "movies"."poster", "movies"."description", json_agg("genres"."name") AS "category_array"
                   FROM "genres"
                   JOIN "movies_genres" ON "movies_genres"."genre_id" = "genres"."id"
@@ -11,7 +13,7 @@ router.get('/', (req, res) => {
                   GROUP BY "movies"."title", "movies"."poster", "movies"."id", "movies"."description"
                   ORDER BY 1;`;
   pool.query(query)
-    .then( result => {
+    .then(result => {
       res.send(result.rows);
     })
     .catch(err => {
@@ -31,13 +33,13 @@ router.post('/', (req, res) => {
 
   // FIRST QUERY MAKES MOVIE
   pool.query(insertMovieQuery, [req.body.title, req.body.poster, req.body.description])
-  .then(result => {
-    console.log('New Movie Id:', result.rows[0].id); //ID IS HERE!
-    
-    const createdMovieId = result.rows[0].id
+    .then(result => {
+      console.log('New Movie Id:', result.rows[0].id); //ID IS HERE!
 
-    // Now handle the genre reference
-    const insertMovieGenreQuery = `
+      const createdMovieId = result.rows[0].id
+
+      // Now handle the genre reference
+      const insertMovieGenreQuery = `
       INSERT INTO "movies_genres" ("movie_id", "genre_id")
       VALUES  ($1, $2);
       `
@@ -51,11 +53,11 @@ router.post('/', (req, res) => {
         res.sendStatus(500)
       })
 
-// Catch for first query
-  }).catch(err => {
-    console.log(err);
-    res.sendStatus(500)
-  })
+      // Catch for first query
+    }).catch(err => {
+      console.log(err);
+      res.sendStatus(500)
+    })
 })
 
 module.exports = router;

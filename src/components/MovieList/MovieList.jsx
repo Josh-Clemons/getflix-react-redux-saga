@@ -15,8 +15,8 @@ function MovieList() {
     }, []);
 
     const movieClick = (movie) => {
-        console.log('in movieClick, movie: ', movie);
-        dispatch({ type: 'GET_DETAIL', payload: movie })
+        // console.log('in movieClick, movie: ', movie);
+        dispatch({ type: 'SET_DETAIL', payload: movie })
         history.push('/detail');
     }
 
