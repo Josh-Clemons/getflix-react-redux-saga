@@ -13,6 +13,8 @@
     box-shadow: 0 0 15px black;
 }
 
+/* below are the animations for the two spans in the header */
+
 .headerDiv b {
     font: 400 14vh "Vibur";
     color: #fee;

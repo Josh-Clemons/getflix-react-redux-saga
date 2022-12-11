@@ -21,7 +21,7 @@ function* fetchAllMovies() {
     // get all movies from the DB
     try {
         const movies = yield axios.get('/api/movie');
-        console.log('get all:', movies.data);
+        // console.log('get all:', movies.data);
         yield put({ type: 'SET_MOVIES', payload: movies.data });
 
     } catch {
@@ -31,9 +31,11 @@ function* fetchAllMovies() {
 }
 
 // gets movie details with categories from DB
+// this step isn't necessary for how I set up the initial query,
+// I am just passing the payload into SET_DETAIL 
 function* getDetail (action) {
     try {
-        console.log('in getDetail, action.payload:', action.payload)
+        // console.log('in getDetail, action.payload:', action.payload)
         yield put ({ type: 'SET_DETAIL', payload: action.payload});
     } catch (error) {
         console.log('error in getDetail', error);

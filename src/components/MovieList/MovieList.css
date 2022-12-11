@@ -9,6 +9,8 @@
     src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
 }
 
+
+/* Below are the styling and animations for the movie list header tag */
 .movieListMain h2 {
     font-family: neon;
     color: #426DFB;
@@ -51,7 +53,8 @@
     box-shadow: 12px 12px 9px -2px rgba(0, 0, 0, 0.76);
 }
 
+/* on hover of a movie it causes it shift up on the page and change background-color */
 .movies div:hover {
-    background-color: rgb(230, 227, 227);
-    margin: 15px 20px 25px 20px;
+    background-color: rgb(189, 238, 196);
+    margin: 5px 20px 35px 20px;
 }
