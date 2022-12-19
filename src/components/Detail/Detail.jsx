@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import './Detail.css';
 
@@ -21,6 +21,13 @@ const Detail = () => {
 
     // returns all movie details for the clicked on movie, with a fixed back button
     // in the lower right, allowing users to return to movie list
+
+    const clickHandler = () => {
+        history.push('/');
+        window.scrollTo(0, 0);
+    }
+
+
     return (
         < div className="detailDiv">
             <h2>{movie.title}</h2>
@@ -32,7 +39,7 @@ const Detail = () => {
                     return <li key={category}>{category}</li>
                 })}
             </ul>
-            <div className="backButtonFixed btn btn-secondary" onClick={() => { history.push('/') }}>Go Back</div>
+            <div className="backButtonFixed btn btn-secondary" onClick={()=> history.push('/') + window.scrollTo(0,0)}>Go Back</div>
 
         </div>
     )
