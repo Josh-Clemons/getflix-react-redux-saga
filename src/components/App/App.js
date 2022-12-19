@@ -15,7 +15,7 @@ function App() {
       <Router>        
         <Route path="/" exact>
           <MovieList />
-          <TableTest />
+          {/* <TableTest /> */}
         </Route>
         <Route exact path="/detail">
           <Detail />
